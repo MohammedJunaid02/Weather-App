@@ -1,7 +1,6 @@
 const apiKey="You can get the API key for this from the Open Weather API";
 const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-// const weather = document.querySelector(".weather");
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
@@ -25,7 +24,6 @@ async function getWeatherDetails(city){
             document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
             document.querySelector(".humidity").innerHTML = data.main.humidity + " %";
             document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-            // alert(data.weather[0].main);
             if(data.weather[0].main == "Clear"){
                 weatherIcon.src = "images/clear.png";
             }
